@@ -32,7 +32,7 @@ class SiamNet_15(nn.Module):
 
         self.fc = nn.Sequential(
             nn.Linear(2*7*7*self.layer_depth[4], self.layer_depth[5]),
-            nn.BatchNorm2d(self.layer_depth[5]), 
+            nn.BatchNorm1d(self.layer_depth[5]), 
             nn.ReLU(),
             nn.Dropout2d(p=0.2), 
             nn.Linear(self.layer_depth[5], self.layer_depth[6]),

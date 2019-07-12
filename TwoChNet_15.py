@@ -43,7 +43,7 @@ class TwoChNet_15(nn.Module):
 
         self.fc = nn.Sequential(
             nn.Linear(self.layer_depth[7], self.layer_depth[8]),
-            nn.BatchNorm2d(self.layer_depth[8]), 
+            nn.BatchNorm1d(self.layer_depth[8]), 
             nn.ReLU(),
             nn.Dropout2d(p=0.2), 
             nn.Linear(self.layer_depth[8], self.layer_depth[9]),
